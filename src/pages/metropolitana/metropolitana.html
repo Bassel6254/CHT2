@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Metropolitana</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+<button (click)="goToModismo()" ion-button block color="primary">Modismos</button>
+
+  <div *ngIf="!isPC" id="map_canvas"></div>
+  <span *ngIf="isPC">{{messageError_Map}}</span>
+  <button (click)="irAInacap()" ion-button block color="danger">Inacap</button>
+</ion-content>
